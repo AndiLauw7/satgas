@@ -1,0 +1,15 @@
+.footer {
+  background-color: rgba(10, 99, 112, 0.9);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+}
+h3 {
+  line-height: 1.2;
+}
+.footer p {
+  margin-bottom: 0;
+}
+.title-img-footer {
+  color: #f3dd00;
+}

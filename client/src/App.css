@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.titLe-navbar {
+  font-family: "Gama Serif", Georgia, "Times New Roman", Times, serif;
+}
