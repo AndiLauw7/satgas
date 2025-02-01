@@ -31,10 +31,10 @@ export default function NavbarComponent() {
         </Container>
         <Container className="nav-content fluid">
           <Nav className="me-auto link-content ">
-            <Nav.Link href="/home">Beranda</Nav.Link>
-            <Nav.Link href="#profil">Profil</Nav.Link>
+            <Nav.Link href="/">Beranda</Nav.Link>
+            <Nav.Link href="/">Profil</Nav.Link>
             <Nav.Link href="">Berita</Nav.Link>
-            <Nav.Link href="">Lapor</Nav.Link>
+            <Nav.Link href="/form-data-lapor">Lapor</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

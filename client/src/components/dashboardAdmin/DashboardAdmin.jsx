@@ -14,17 +14,20 @@ import UpdateBerita from "./formUpdate/update-berita/UpadateBerita";
 import UpdateProfil from "./formUpdate/update-profil/UpdateProfil";
 import AddTindakLanjut from "./formTambah/addTindakLanjut";
 import DataTindakLanjut from "../../pages/dataTindakLanjut";
+import ReportData from "../../pages/reportData";
+import ContentDashboard from "./ContentDashboard";
 
 export default function dashboardAdmin() {
   return (
     <div style={{ display: "flex" }}>
       {/* Sidebar */}
       <Sidebar />
-
       {/* Content */}
       <div style={{ flexGrow: 1, padding: "20px" }}>
+        <ContentDashboard />
+
         <Routes>
-          <Route path="/" element={<h1>Dashboard Admin</h1>} />
+          {/* <Route path="/" element={<h1>Dashboard Admin</h1>} /> */}
           <Route path="data-master-pelapor" element={<DataLaporPage />} />
           <Route
             path="data-master-pelapor/tambah-data-lapor"
@@ -63,6 +66,8 @@ export default function dashboardAdmin() {
             path="data-master-tindak-lanjut/tambah-data-tindak-lanjut"
             element={<AddTindakLanjut />}
           />
+
+          <Route path="data-laporan" element={<ReportData />} />
         </Routes>
       </div>
     </div>

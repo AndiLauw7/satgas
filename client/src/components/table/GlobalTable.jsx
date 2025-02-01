@@ -61,7 +61,7 @@ const GlobalTable = (props) => {
           </tbody>
         </table>
       )}
-      <div className="pagination-container flex justify-center">
+      <div className="pagination-container flex justify-center navigation">
         <Pagination>
           <Pagination.Prev
             disabled={currentPage === 1}

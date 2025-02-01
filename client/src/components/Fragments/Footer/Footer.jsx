@@ -5,6 +5,7 @@ import viteSvg from "../../../../public/vite.svg";
 import tiktok from "../../../../public/img/tiktok.png";
 import instagram from "../../../../public/img/instagram.png";
 import youtube from "../../../../public/img/youtube.png";
+import logoPPks from "../../../../public/img/logosatgasppksunipi.png";
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
           <div className="col md-4 block mt-3">
             <img
               alt=""
-              src={viteSvg}
+              src={logoPPks}
               width="60"
               height="60"
               className="d-inline-block align-top mb-3"
@@ -48,7 +49,7 @@ export default function Footer() {
           <div className="col md-4 block mt-3 ">
             <img
               alt=""
-              src={viteSvg}
+              src={logoPPks}
               width="60"
               height="60"
               className="d-inline-block align-top ml-3 mr-3 mb-3"

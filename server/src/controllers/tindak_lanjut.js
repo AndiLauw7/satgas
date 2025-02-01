@@ -54,7 +54,7 @@ exports.addTindakLanjut = async (req, res) => {
 exports.tindakLanjutStatus = async (req, res) => {
   try {
     const { id } = req.params;
-    const { status_laporan } = req.body;
+    const { status_laporan, keterangan, tgl } = req.body;
 
     const validasiStatus = ["Diproses", "Selesai"];
 
@@ -68,13 +68,15 @@ exports.tindakLanjutStatus = async (req, res) => {
       return res.status(404).json({ message: "Tindak lanjut tidak ditemukan" });
     }
 
-    await tindakLanjuts.update({ status_laporan });
+    await tindakLanjuts.update({ status_laporan, tgl, keterangan });
 
     if (tindakLanjuts.pelapor && tindakLanjuts.pelapor.email) {
       await sendEmailKePelapor(
         tindakLanjuts.pelapor.email,
         tindakLanjuts.pelapor.nama_pelapor,
-        status_laporan
+        status_laporan,
+        tgl,
+        keterangan
       );
     }
 
@@ -93,7 +95,14 @@ exports.getAllTindakLanjut = async (req, res) => {
         {
           model: Pelapor,
           as: "pelapor",
-          attributes: ["id", "nama_pelapor", "email"],
+          attributes: [
+            "id",
+            "nama_pelapor",
+            "email",
+            "status_pelapor",
+            "nama_terlapor",
+            "status_terlapor",
+          ],
           order: [["createdAt", "DESC"]],
         },
       ],
@@ -110,3 +119,4 @@ exports.getAllTindakLanjut = async (req, res) => {
     });
   }
 };
+

@@ -1,12 +1,29 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .titLe-navbar {
-  font-family: "Gama Serif", Georgia, "Times New Roman", Times, serif;
+    font-family: "Gama Serif", Georgia, "Times New Roman", Times, serif;
+}
+
+@media print {
+    /* Sembunyikan sidebar dan elemen lain yang tidak perlu saat mencetak */
+    .sidebar,
+    .navbar,
+    .footer,
+    .navigation,
+    .btn-print {
+        display: none !important;
+    }
+    /* Pastikan konten t
+        width: 100% !important;abel memenuhi halaman */
+    .report-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }
